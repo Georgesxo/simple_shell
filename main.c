@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/**
+ * main- handles command line arguments
+ * @argc: parameter
+ * @argv: parameter
+ * Return: a value
+ */
+
 int main(int argc, char **argv)
 {
 	char *cmpompt = " $ ";
