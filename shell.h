@@ -13,6 +13,10 @@
 #include <sys/wait.h>
 
 
+#define FMODE S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH
+
+#define FFLAG O_CREAT|O_WRONLY|O_TRUNC
+
 
 int portion_argv(const char *str, const char *dilim, char ***argvp);
 
@@ -24,7 +28,7 @@ int spawn(char *comand, char **args);
 
 void h_pipe(char *comands);
 
-void exedir(char *s, int ini, int outi);
+void exedir(char s, int ini, int outi);
 
 int padiri(char *comand);
 
@@ -36,6 +40,6 @@ void exit_prog(void);
 
 void alias(char **args);
 
-
+char *itoa(int val, char *str, int bas);
 
 #endif

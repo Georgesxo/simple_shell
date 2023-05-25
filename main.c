@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-	char *cmpompt = "(Gshell) $ ";
+	char *cmpompt = " $ ";
 	char *lineptr;
 	size_t n = 0;
 	ssize_t char_read;
