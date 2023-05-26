@@ -13,10 +13,12 @@
 #include <sys/wait.h>
 
 
-#define FMODE S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH
+#define MAX 100
 
-#define FFLAG O_CREAT|O_WRONLY|O_TRUNC
+#define maxlines 100
 
+
+void portion(char *lineptr, char **args, int max);
 
 int portion_argv(const char *str, const char *dilim, char ***argvp);
 
@@ -24,7 +26,7 @@ void freeargv(char **argv);
 
 char *get_fpath(char *comand);
 
-int spawn(char *comand, char **args);
+int spawn_f(char *comand, char **args);
 
 void h_pipe(char *comands);
 
